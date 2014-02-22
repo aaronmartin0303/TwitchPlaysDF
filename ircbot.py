@@ -22,7 +22,7 @@ import time
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-AUTH = "oauth:m5wcnm5nbqo71mua0nj5xm8cxziy07p" #Obtained at http://www.twitchapps.com/tmi 
+AUTH = "" #Obtained at http://www.twitchapps.com/tmi 
 
 NICK = "aaichabod"
 IDENT = "aaichabod"
