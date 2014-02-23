@@ -135,9 +135,10 @@ shiftY_c = 0
 z_c = 0 #status
 shiftZ_c = 0 #sleep
 ##############
+alty_c = 0
 
 shell = win32com.client.Dispatch("WScript.Shell")
-shell.Run("DwarfFortress.exe")
+shell.Run("DwarfFortress.exe") #remember to rename your executable in the game's folder
 
 VK_CODE = {'backspace':0x08,
                     'tab':0x09,
@@ -541,14 +542,16 @@ while True:
                     shiftX_c = shiftX_c + 1
                 if value_c == "y/n" or value_c == "y":
                     y_c = y_c + 1
+                if value_c == "alty/n" or value_c == "alty":
+                    alty_c = alty_c + 1
                 if value_c == "Y/n" or value_c == "Y":
                     shiftY_c = shiftY_c + 1
                 if value_c == "z/n" or value_c == "z":
                     z_c = z_c + 1
                 if value_c == "Z/n" or value_c == "Z":
                     shiftZ_c = shiftZ_c + 1
-        alloutputs = {'up': up_c, 'right': right_c, 'down': down_c, 'left': left_c, 'enter': enter_c, 'esc': esc_c, 'space': space_c, '.': stop_c, '>': shiftstop_c, ',': comma_c, '<': shiftcomma_c, 'npne': numpad9_c, 'npn': numpad8_c, 'npnw': numpad7_c, 'npe': numpad6_c, 'npc': numpad5_c, 'npw': numpad4_c, 'npse': numpad3_c, 'nps': numpad2_c, 'npsw': numpad1_c, 'np0': numpad0_c, '1': one_c, '2': two_c, '3': three_c, '4':four_c, '5': five_c, '6': six_c, '7': seven_c, '8': eight_c, '9': nine_c, '0': zero_c, 'backspace': backspace_c, 'tab': tab_c, 'shiftup': shiftup_c, 'altup': altup_c, 'shiftright': shiftright_c, 'altright': altright_c, 'shiftdown': shiftdown_c, 'altdown': altdown_c, 'shiftleft': shiftleft_c, 'altleft': altleft_c, '+': plus_c, '-': minus_c, '*': asterisk_c, '\\': backslash_c, '|': shiftbackslash_c, '/': slash_c, '?': shiftslash_c, '[': leftbracket_c, '{': leftshiftbracket_c, ']': rightbracket_c, '}': rightshiftbracket_c, 'f1': f1_c, 'f2': f2_c, 'f3': f3_c, 'f4': f4_c, 'f5': f5_c, 'f6': f6_c, 'f7': f7_c, 'f8': f8_c, 'a': a_c, 'A': shiftA_c, 'b': b_c, 'B': shiftB_c, 'c': c_c, 'C':  shiftC_c, 'd': d_c, 'D': shiftD_c, 'e': e_c, 'E': shiftE_c, 'f': f_c, 'F': shiftF_c, 'g': g_c, 'G': shiftG_c, 'h': h_c, 'H': shiftH_c, 'i': i_c, 'I': shiftI_c, 'j': j_c, 'J': shiftJ_c, 'k': k_c, 'K': shiftK_c, 'l': l_c, 'L':shiftL_c, 'm': m_c, 'M': shiftM_c, 'n': n_c, 'N': shiftN_c, 'o': o_c, 'O': shiftO_c, 'p': p_c, 'P': shiftP_c, 'q': q_c, 'Q': shiftQ_c, 'r': r_c, 'R': shiftR_c, 's': s_c, 'S': shiftS_c, 't': t_c, 'T': shiftT_c, 'u': u_c, 'U': shiftU_c, 'v': v_c, 'V': shiftV_c, 'w': w_c, 'W': shiftW_c, 'x': x_c, 'X': shiftX_c, 'y': y_c, 'Y': shiftY_c, 'z': z_c, 'Z': shiftZ_c}
-        if(enter_c + esc_c + space_c + stop_c + shiftstop_c + comma_c + shiftcomma_c + numpad9_c + numpad8_c + numpad7_c + numpad6_c + numpad5_c + numpad4_c + numpad3_c + numpad2_c + numpad1_c + numpad0_c+ one_c + two_c + three_c + four_c + five_c + six_c + seven_c + eight_c + nine_c + zero_c + backspace_c + tab_c + up_c + shiftup_c + altup_c + right_c + shiftright_c + altright_c + down_c + shiftdown_c +altdown_c + left_c + shiftleft_c + altleft_c + plus_c + minus_c + asterisk_c + backslash_c + shiftbackslash_c + slash_c + shiftslash_c +leftbracket_c + leftshiftbracket_c + rightbracket_c + rightshiftbracket_c + f1_c + f2_c + f3_c + f4_c + f5_c + f6_c + f7_c +f8_c + a_c + shiftA_c + b_c + shiftB_c + c_c +  shiftC_c + d_c + shiftD_c +  e_c + shiftE_c + f_c + shiftF_c + g_c + shiftG_c + h_c + shiftH_c + i_c + shiftI_c + j_c + shiftJ_c + k_c + shiftK_c + l_c + shiftL_c + m_c + shiftM_c + n_c + shiftN_c + o_c + shiftO_c + p_c + shiftP_c + q_c + shiftQ_c + r_c + shiftR_c + s_c + shiftS_c + t_c + shiftT_c + u_c + shiftU_c + v_c + shiftV_c + w_c + shiftW_c + x_c + shiftX_c + y_c + shiftY_c + z_c + shiftZ_c == 0):
+        alloutputs = {'up': up_c, 'right': right_c, 'down': down_c, 'left': left_c, 'enter': enter_c, 'esc': esc_c, 'space': space_c, '.': stop_c, '>': shiftstop_c, ',': comma_c, '<': shiftcomma_c, 'npne': numpad9_c, 'npn': numpad8_c, 'npnw': numpad7_c, 'npe': numpad6_c, 'npc': numpad5_c, 'npw': numpad4_c, 'npse': numpad3_c, 'nps': numpad2_c, 'npsw': numpad1_c, 'np0': numpad0_c, '1': one_c, '2': two_c, '3': three_c, '4':four_c, '5': five_c, '6': six_c, '7': seven_c, '8': eight_c, '9': nine_c, '0': zero_c, 'backspace': backspace_c, 'tab': tab_c, 'shiftup': shiftup_c, 'altup': altup_c, 'shiftright': shiftright_c, 'altright': altright_c, 'shiftdown': shiftdown_c, 'altdown': altdown_c, 'shiftleft': shiftleft_c, 'altleft': altleft_c, '+': plus_c, '-': minus_c, '*': asterisk_c, '\\': backslash_c, '|': shiftbackslash_c, '/': slash_c, '?': shiftslash_c, '[': leftbracket_c, '{': leftshiftbracket_c, ']': rightbracket_c, '}': rightshiftbracket_c, 'f1': f1_c, 'f2': f2_c, 'f3': f3_c, 'f4': f4_c, 'f5': f5_c, 'f6': f6_c, 'f7': f7_c, 'f8': f8_c, 'a': a_c, 'A': shiftA_c, 'b': b_c, 'B': shiftB_c, 'c': c_c, 'C':  shiftC_c, 'd': d_c, 'D': shiftD_c, 'e': e_c, 'E': shiftE_c, 'f': f_c, 'F': shiftF_c, 'g': g_c, 'G': shiftG_c, 'h': h_c, 'H': shiftH_c, 'i': i_c, 'I': shiftI_c, 'j': j_c, 'J': shiftJ_c, 'k': k_c, 'K': shiftK_c, 'l': l_c, 'L':shiftL_c, 'm': m_c, 'M': shiftM_c, 'n': n_c, 'N': shiftN_c, 'o': o_c, 'O': shiftO_c, 'p': p_c, 'P': shiftP_c, 'q': q_c, 'Q': shiftQ_c, 'r': r_c, 'R': shiftR_c, 's': s_c, 'S': shiftS_c, 't': t_c, 'T': shiftT_c, 'u': u_c, 'U': shiftU_c, 'v': v_c, 'V': shiftV_c, 'w': w_c, 'W': shiftW_c, 'x': x_c, 'X': shiftX_c, 'y': y_c, 'alty': alty_c, 'Y': shiftY_c, 'z': z_c, 'Z': shiftZ_c}
+        if(enter_c + esc_c + space_c + stop_c + shiftstop_c + comma_c + shiftcomma_c + numpad9_c + numpad8_c + numpad7_c + numpad6_c + numpad5_c + numpad4_c + numpad3_c + numpad2_c + numpad1_c + numpad0_c+ one_c + two_c + three_c + four_c + five_c + six_c + seven_c + eight_c + nine_c + zero_c + backspace_c + tab_c + up_c + shiftup_c + altup_c + right_c + shiftright_c + altright_c + down_c + shiftdown_c +altdown_c + left_c + shiftleft_c + altleft_c + plus_c + minus_c + asterisk_c + backslash_c + shiftbackslash_c + slash_c + shiftslash_c +leftbracket_c + leftshiftbracket_c + rightbracket_c + rightshiftbracket_c + f1_c + f2_c + f3_c + f4_c + f5_c + f6_c + f7_c +f8_c + a_c + shiftA_c + b_c + shiftB_c + c_c +  shiftC_c + d_c + shiftD_c +  e_c + shiftE_c + f_c + shiftF_c + g_c + shiftG_c + h_c + shiftH_c + i_c + shiftI_c + j_c + shiftJ_c + k_c + shiftK_c + l_c + shiftL_c + m_c + shiftM_c + n_c + shiftN_c + o_c + shiftO_c + p_c + shiftP_c + q_c + shiftQ_c + r_c + shiftR_c + s_c + shiftS_c + t_c + shiftT_c + u_c + shiftU_c + v_c + shiftV_c + w_c + shiftW_c + x_c + shiftX_c + y_c + shiftY_c + z_c + shiftZ_c + alty_c == 0):
             selected_c = "None"
         else:
             selected_c = max(alloutputs, key = alloutputs.get)
@@ -664,6 +667,7 @@ while True:
         print("x: " + str(x_c))
         print("X: " + str(shiftX_c))
         print("y: " + str(y_c))
+        print("alty: " + str(alty_c))
         print("Y: " + str(shiftY_c))
         print("z: " + str(z_c))
         print("Z: " + str(shiftZ_c))
@@ -777,6 +781,7 @@ while True:
         x_c = 0
         shiftX_c = 0
         y_c = 0
+        alty_c = 0
         shiftY_c = 0
         z_c = 0
         shiftZ_c = 0
@@ -1220,6 +1225,10 @@ while True:
             shell.AppActivate("Dwarf Fortress")
             time.sleep(.01)
             press("y")
+        if selected_c == "alty":
+            shell.AppActivate("Dwarf Fortress")
+            time.sleep(.01)
+            pressHoldRelease("alt", "y")
         if selected_c == "Y":
             shell.AppActivate("Dwarf Fortress")
             time.sleep(.01)

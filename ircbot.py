@@ -24,12 +24,11 @@ HOST = "irc.twitch.tv"
 PORT = 6667
 AUTH = "" #Obtained at http://www.twitchapps.com/tmi 
 
-NICK = "aaichabod"
-IDENT = "aaichabod"
-REALNAME = "aaichabod"
-MASTER = "aaichabod"
-CHAT_CHANNEL = "aaichabod" #Typically username of the streamer
-
+NICK = "username" 
+IDENT = "username"
+REALNAME = "username"
+MASTER = "username"
+CHAT_CHANNEL = "username" #Typically username of the streamer
 readbuffer = ""
 out = ""
 x = 0
@@ -399,6 +398,9 @@ while 1:
         if out == "y":
             with open("commands.txt", "a") as f:
                 f.write('\n' + user + "y")
+        if out == "alty":
+            with open("commands.txt", "a") as f:
+                f.write('\n' + user + "alty")
         if out == "Y":
             with open("commands.txt", "a") as f:
                 f.write('\n' + user + "Y")
