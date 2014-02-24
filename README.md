@@ -4,7 +4,7 @@ TwitchPlaysDF
 Exactly what it says! From <a href='https://github.com/sunshinekitty5/TwitchPlaysPokemon'>Sunshinekitty5's TwitchPlaysPokemon</a>
 
 
-<h1>Twitch Plays Pokemon IRC Bot</h1>
+<h1>Twitch Plays Dwarf Fortress IRC Bot</h1>
 <h2>Written in Python 3.3.4</h2>
 <p>This is a quick and easy way for people Windows 7, Python33, and win32 to connect Twitch to Dwarf Fortress and have an interactive chat.</p>
 
